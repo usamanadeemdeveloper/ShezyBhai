@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="bootstrap/bootstrap-5.2.0-dist/css/bootstrap.css"
+    />
+    <script src="bootstrap/bootstrap-5.2.0-dist/js/bootstrap.bundle.js"></script>
+</head>
+<body>
+    <div class="container-fluid px-0">
+        <header class="bg-dark">
+          <img src="images/Screenshot 2023-07-05 232050.png" alt="" /> |
+          <span class="text-white">Calculator v1.0</span>
+        </header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid px-0">
+            <span class="col-4 bg-dark text-white p-2"
+              >Go To<i class="fa-solid fa-arrow-right offset-10"></i
+            ></span>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <button
+                    class="border-0 rounded-end bg-warning ms-lg-2 mt-1 mt-lg-0"
+                  >
+                    <a class="nav-link active" aria-current="page" href="index.html"
+                      >Pricing Report</a
+                    >
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button
+                    class="border-0 rounded-end bg-warning ms-lg-2 mt-1 mt-lg-0"
+                  >
+                    <a class="nav-link active" aria-current="page" href="paper-market-rates.html"
+                      >Paper Market Rates</a
+                    >
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button
+                    class="border-0 rounded-end bg-warning ms-lg-2 mt-1 mt-lg-0"
+                  >
+                    <a class="nav-link active" aria-current="page" href="press-machines.html"
+                      >Press (Machines)</a
+                    >
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button
+                    class="border-0 rounded-end bg-warning ms-lg-2 mt-1 mt-lg-0"
+                  >
+                    <a class="nav-link active" aria-current="page" href="uping.html"
+                      >Uping</a
+                    >
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button
+                    class="border-0 rounded-end bg-warning ms-lg-2 mt-1 mt-lg-0"
+                  >
+                    <a class="nav-link active" aria-current="page" href="more-options.html"
+                      >More Options</a
+                    >
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button
+                    class="border-0 rounded-end bg-warning ms-lg-2 mt-1 mt-lg-0"
+                  >
+                    <a class="nav-link active" aria-current="page" href=""
+                      >Settings</a
+                    >
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    <header class="border-bottom border-3 border-dark">
+        <img src="images/Screenshot 2023-07-09 213736.png" alt="">
+    </header>
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <div class="border-end border-3 border-dark col-5 px-0">
+            <div class="col-12 border-3 border-dark border-bottom pb-1">
+                <small class="bg-warning fw-bold p-1">GENERAL WORKBOOK SETTINGS</small>
+            </div>
+                <div class="row">
+                    <div class="col-12 btn-group mt-3">
+                        <button class="bg-dark text-white col-6">WORKBOOK START DATE</button>
+                        <select class="form-select form-select-sm text-center" id="printArea"></select>
+                      </div>
+                </div>
+                <div class="row border-3 border-dark border-bottom mx-auto">
+                    <div class="col-12 btn-group mt-3 ps-0">
+                        <button class="bg-warning fs-6 fw-bolder border-0 col-6">SETUP FEE AND MARGIN SETTINGS</button>
+                        <span class="text-center fs-6 text-info ps-3 fw-bolder">FOR CALCULATOR WORKSHEET ONLY</span>
+                      </div>
+                </div>
+                <div class="row mt-3 ms-lg-1">
+                    <table class="table-bordered col-4">
+                    <tr>
+                        <th class="bg-dark text-white text-lg-start">ENTER MARGIN</th>
+                    </tr>
+                    <tr>
+                        <td class="col-4 text-lg-end border-1 border border-dark">50.00%</td>
+                    </tr>
+                    </table>
+                    <table class="table-bordered col-7 ms-lg-2">
+                        <tr>
+                            <th class="bg-dark text-white col-4 text-lg-start ms-lg-2">ENTER SETUP FEE</th>
+                        </tr>
+                        <tr>
+                            <td class="text-lg-end border-1 border border-dark ms-lg-2">5000.00</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="row border-3 border-dark border-bottom mx-auto">
+                    <div class="col-12 btn-group mt-3 ps-0">
+                        <button class="bg-warning fs-6 fw-bolder border-0 col-6">PAPER STOCK AND GSM SETTINGS</button>
+                      </div>
+                </div>
+                
+                <div class="row mt-2 ms-lg-1">
+                    <span class="text-center fs-6 text-info offset-1 fw-bolder mb-1 ps-0">FOR CALCULATOR WORKSHEET ONLY</span>
+                    <table class="table-bordered col-4">
+                        <tr>
+                            <th class="bg-dark text-white text-lg-start">PAPER STOCK</th>
+                        </tr>
+                        <tr>
+                            <td class="col-4 text-lg-start border-1 border border-dark fs-6">ART PAPER/MATE</td>
+                        </tr>
+                        <tr>
+                            <td class="col-4 text-lg-start border-1 border border-dark fs-6">CARBONLESS</td>
+                        </tr>
+                        <tr>
+                            <td class="col-4 text-lg-start border-1 border border-dark fs-6">GLOSSY/ART PAPER</td>
+                        </tr>
+                        <tr>
+                            <td class="col-4 text-lg-start border-1 border border-dark fs-6">MATE PAPER</td>
+                        </tr>
+                        <tr>
+                            <td class="col-4 text-lg-start border-1 border border-dark fs-6">NEWS PAPER</td>
+                        </tr>
+                        <tr>
+                            <td class="col-4 text-lg-start border-1 border border-dark fs-6">UNCOATED/OFFSET</td>
+                        </tr>
+                        <tr>
+                            <td class="col-4 text-lg-start border-1 border border-dark fs-6">WHITE LINEN</td>
+                        </tr>
+                        <tr>
+                            <td class="col-4 text-lg-start border-1 border border-dark fs-6">YELLOW LAID</td>
+                        </tr>
+                        <tr>
+                            <td class="col-4 text-lg-start border-1 border border-dark fs-6">BLEACH CARD</td>
+                        </tr>
+                        </table>
+                        <table class="table-bordered col-7 ms-lg-2">
+                            <tr>
+                                <th class="bg-dark text-white col-4 text-center ms-lg-2">PAPER STOCK</th>
+                                <th class="bg-dark text-white col-4 text-center ms-lg-2">THICKNESS(GSM)</th>
+                            </tr>
+                            <tr>
+                                <td class="text-lg-start border-1 border border-dark ms-lg-2 fs-6">ART PAPER/MATE</td>
+                                <td class="text-center border-1 border border-dark ms-lg-2">90</td>
+                            </tr>
+                            <tr>
+                                <td class="text-lg-start border-1 border border-dark ms-lg-2 fs-6">BLEACH CARD</td>
+                                <td class="text-center border-1 border border-dark ms-lg-2">300</td>
+                            </tr>
+                            <tr>
+                                <td class="text-lg-start border-1 border border-dark ms-lg-2 fs-6">BLEACH CARD</td>
+                                <td class="text-center border-1 border border-dark ms-lg-2">250</td>
+                            </tr>
+                            <tr>
+                                <td class="text-lg-start border-1 border border-dark ms-lg-2 fs-6">CARBONLESS</td>
+                                <td class="text-center border-1 border border-dark ms-lg-2">48</td>
+                            </tr>
+                            <tr>
+                                <td class="text-lg-start border-1 border border-dark ms-lg-2 fs-6">GLOSSY/ART PAPER</td>
+                                <td class="text-center border-1 border border-dark ms-lg-2">113</td>
+                            </tr>
+                            <tr>
+                                <td class="text-lg-start border-1 border border-dark ms-lg-2 fs-6">GLOSSY/ART PAPER</td>
+                                <td class="text-center border-1 border border-dark ms-lg-2">128</td>
+                            </tr>
+                            <tr>
+                                <td class="text-lg-start border-1 border border-dark ms-lg-2 fs-6">GLOSSY/ART PAPER</td>
+                                <td class="text-center border-1 border border-dark ms-lg-2">150</td>
+                            </tr>
+                            <tr>
+                                <td class="text-lg-start border-1 border border-dark ms-lg-2 fs-6">MATE PAPER</td>
+                                <td class="text-center border-1 border border-dark ms-lg-2">113</td>
+                            </tr>
+                            <tr>
+                                <td class="text-lg-start border-1 border border-dark ms-lg-2 fs-6">MATE PAPER</td>
+                                <td class="text-center border-1 border border-dark ms-lg-2">128</td>
+                            </tr>
+                            <tr>
+                                <td class="text-lg-start border-1 border border-dark ms-lg-2 fs-6">MATE PAPER</td>
+                                <td class="text-center border-1 border border-dark ms-lg-2">150</td>
+                            </tr>
+                            <tr>
+                                <td class="text-lg-start border-1 border border-dark ms-lg-2 fs-6">NEWS PAPER</td>
+                                <td class="text-center border-1 border border-dark ms-lg-2">48</td>
+                            </tr>
+                            <tr>
+                                <td class="text-lg-start border-1 border border-dark ms-lg-2 fs-6">UNCOATED OFFSET</td>
+                                <td class="text-center border-1 border border-dark ms-lg-2">70</td>
+                            </tr>
+                            <tr>
+                                <td class="text-lg-start border-1 border border-dark ms-lg-2 fs-6">UNCOATED OFFSET</td>
+                                <td class="text-center border-1 border border-dark ms-lg-2">80</td>
+                            </tr>
+                        </table>
+                </div>
+                <div class="row border-3 border-dark border-bottom mx-auto">
+                    <div class="col-12 btn-group mt-3 ps-0">
+                        <button class="bg-warning fs-6 fw-bolder border-0 col-6">CTP SETTINGS</button>
+                      </div>
+                </div>
+                <div class="row mt-3 ms-lg-1">
+                    <table class="table-bordered col-5">
+                        <tr>
+                            <th class="bg-dark text-white text-center">NO. CTP PLATES</th>
+                        </tr>
+                        <tr>
+                            <td class="col-4 text-center border-1 border border-dark fs-6">4</td>
+                        </tr>
+                        <tr>
+                            <td class="col-4 text-center border-1 border border-dark fs-6">3</td>
+                        </tr>
+                        <tr>
+                            <td class="col-4 text-center border-1 border border-dark fs-6">2</td>
+                        </tr>
+                        <tr>
+                            <td class="col-4 text-center border-1 border border-dark fs-6">1</td>
+                        </tr>
+                        <tr>
+                            <td class="col-4 text-center border-1 border border-dark fs-6">0</td>
+                        </tr>
+                        <tr>
+                            <td class="col-4 text-center border-1 border border-dark fs-6">5</td>
+                        </tr>
+                        <tr>
+                            <td class="col-4 text-center border-1 border border-dark fs-6">6</td>
+                        </tr>
+                        </table>
+                        <table class="table-bordered col-5 ms-lg-2">
+                            <tr>
+                                <th class="bg-dark text-white col-4 text-center ms-lg-2">NO. CTP PLATES (BACK)</th>
+                            </tr>
+                            <tr>
+                                <td class="text-center border-1 border border-dark ms-lg-2 fs-6">4</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center border-1 border border-dark ms-lg-2 fs-6">3</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center border-1 border border-dark ms-lg-2 fs-6">2</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center border-1 border border-dark ms-lg-2 fs-6">1</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center border-1 border border-dark ms-lg-2 fs-6">0</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center border-1 border border-dark ms-lg-2 fs-6">5</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center border-1 border border-dark ms-lg-2 fs-6">6</td>
+                            </tr>
+                        </table>
+                </div>
+                <div class="row border-3 border-dark border-bottom mx-auto">
+                    <div class="col-12 btn-group mt-3 ps-0">
+                        <button class="bg-warning fs-6 fw-bolder border-0 col-6">MISSCELLANEOUS SETTINGS</button>
+                      </div>
+                </div>
+
+                <div class="row mt-3 ms-lg-1">
+                    <table class="table-bordered col-5">
+                        <tr>
+                            <th class="bg-dark text-white text-center fs-6">FLYER PRINTED SIDE OPTIONS</th>
+                        </tr>
+                        <tr>
+                            <td class="col-4 text-center border-1 border border-dark fs-6">SINGLE SIDED</td>
+                        </tr>
+                        <tr>
+                            <td class="col-4 text-center border-1 border border-dark fs-6">DOUBLE SIDED</td>
+                        </tr>
+                        </table>
+                        <table class="table-bordered col-5 ms-lg-2">
+                            <tr>
+                                <th class="bg-dark text-white col-4 text-center ms-lg-2 fs-6">ALTERNATE IMPOSITION</th>
+                            </tr>
+                            <tr>
+                                <td class="text-center border-1 border border-dark ms-lg-2 fs-6">NOT APPLICALE</td>
+                            </tr>
+                        </table>
+                        <table class="table-bordered col-5 mt-5">
+                            <tr>
+                                <th class="bg-dark text-white col-4 text-center ms-lg-2 fs-6">IMPOSITION</th>
+                            </tr>
+                            <tr>
+                                <td class="text-center border-1 border border-dark ms-lg-2 fs-6">APPLIED</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center border-1 border border-dark ms-lg-2 fs-6">NOT APPLIED</td>
+                            </tr>
+                        </table>
+                        <table class="table-bordered col-5 ms-lg-2 mt-5">
+                            <tr>
+                                <th class="bg-dark text-white col-4 text-center ms-lg-2 fs-6">PAPER MARKET RATES STATUS</th>
+                            </tr>
+                            <tr>
+                                <td class="text-center border-1 border border-dark ms-lg-2 fs-6">VERIFIED</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center border-1 border border-dark ms-lg-2 fs-6">UNVERIFIED</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center border-1 border border-dark ms-lg-2 fs-6">INVALID</td>
+                            </tr>
+                        </table>
+                </div>
+            </div>
+            <div class="border-end border-3 border-dark col-5 px-0">
+            <div class="col-12 border-3 border-dark border-bottom pb-1">
+                <small class="bg-warning fw-bold p-1">SLICING SETTINGS</small>
+            </div>
+                <div class="row mx-auto">
+                    <div class="col-12 btn-group mt-3">
+                        <button class="bg-dark text-white col-6 fs-6 px-0">SLICING PRICE x 500 (CALCULATOR)-COST</button>
+                        <select class="form-select form-select-sm text-center" id=""></select>
+                      </div>
+                </div>
+                <div class="row border-3 border-dark border-bottom mx-auto" style="height: 43px;">
+                    <div class="col-12 mt-3 ps-0">
+                        <button class="bg-warning fs-6 fw-bolder border-0 col-6">CUTTING SETTINGS</button>
+                      </div>
+                </div>
+                <div class="row mt-3 ms-lg-1">
+                    <div class="col-12 btn-group mt-3">
+                        <button class="bg-dark text-white col-6">CUTTING x 1,000</button>
+                        <select class="form-select form-select-sm text-center" id=""></select>
+                      </div>
+                </div>
+                <div class="row border-3 border-dark border-bottom mx-auto" style="height: 43px;">
+                    <div class="col-12 mt-3 ps-0">
+                        <button class="bg-warning fs-6 fw-bolder border-0 col-6">LAMINATION SETTINGS</button>
+                      </div>
+                </div>
+                
+                <div class="row mt-2 mx-lg-2">
+                    <table class="table-bordered">
+                        <tr>
+                            <td class="bg-dark text-white text-center fs-6 px-0">LAMINATION MATERIAL TYPE</td>
+                            <th class="bg-dark text-white text-center fs-6 px-0">LAMINATION PROCESS</th>
+                            <th class="bg-dark text-white text-center fs-6 px-0">LAMINATION SIDE OPTIONS</th>
+                        </tr>
+                        <tr>
+                            <td class="col-4 text-lg-start border-1 border border-dark fs-6">GLOSSY</td>
+                            <td class="col-4 text-lg-start border-1 border border-dark fs-6">HOT</td>
+                            <td class="col-4 text-lg-start border-1 border border-dark fs-6">SINGLE SIDED</td>
+                        </tr>
+                        <tr>
+                            <td class="col-4 text-lg-start border-1 border border-dark fs-6">MATE</td>
+                            <td class="col-4 text-lg-start border-1 border border-dark fs-6">COLD</td>
+                            <td class="col-4 text-lg-start border-1 border border-dark fs-6">DOUBLE SIDED</td>
+                        </tr>
+                        <tr class="border-0">
+                            <td class="col-4 text-lg-start border-1 border border-dark fs-6">SOFT TOUCH</td>
+                        </tr>
+                        </table>
+                </div>
+                <div class="row border-3 border-dark border-bottom mx-auto" style="height: 43px;">
+                    <div class="col-12 mt-3 ps-0">
+                        <button class="bg-warning fs-6 fw-bolder border-0 col-6">PRODUCT SETTINGS</button>
+                      </div>
+                </div>
+                <div class="row mt-3 ms-lg-1">
+                    <table class="table-bordered col-4">
+                        <tr>
+                            <th class="bg-dark text-white text-center fs-6">PRODUCT NAMES LIST</th>
+                        </tr>
+                        <tr>
+                            <td class="text-lg-start border-1 border border-dark fs-6">BROCHURE</td>
+                        </tr>
+                        <tr>
+                            <td class="text-lg-start border-1 border border-dark fs-6">BUISNESS CARDS</td>
+                        </tr>
+                        <tr>
+                            <td class="text-lg-start border-1 border border-dark fs-6">ENVELOPES</td>
+                        </tr>
+                        <tr>
+                            <td class="text-lg-start border-1 border border-dark fs-6">FLYER</td>
+                        </tr>
+                        <tr>
+                            <td class="text-lg-start border-1 border border-dark fs-6">INVOICE PADS</td>
+                        </tr>
+                        <tr>
+                            <td class="text-lg-start border-1 border border-dark fs-6">LETTER HEADS</td>
+                        </tr>
+                        <tr>
+                            <td class="text-lg-start border-1 border border-dark fs-6">PAPER BAGS</td>
+                        </tr>
+                        <tr>
+                            <td class="text-lg-start border-1 border border-dark fs-6">POST CARDS</td>
+                        </tr>
+                        <tr>
+                            <td class="text-lg-start border-1 border border-dark fs-6">PRESENTATION FOLDER</td>
+                        </tr>
+                        <tr>
+                            <td class="text-lg-start border-1 border border-dark fs-6">STICKERS</td>
+                        </tr>
+                        </table>
+                </div>
+                <div class="row border-3 border-dark border-bottom mx-auto" style="height: 43px;">
+                    <div class="col-12 mt-3 ps-0">
+                        <button class="bg-warning fs-6 fw-bolder border-0 col-6">BINDED MATERIAL SETTINGS</button>
+                      </div>
+                </div>
+
+                <div class="row mt-3 ms-lg-1">
+                    <table class="table-bordered col-4">
+                        <tr>
+                            <th class="bg-dark text-white text-center fs-6">BINDED MATERIAL PART</th>
+                        </tr>
+                        <tr>
+                            <td class="col-4 text-center border-1 border border-dark fs-6">4</td>
+                        </tr>
+                        <tr>
+                            <td class="col-4 text-center border-1 border border-dark fs-6">3</td>
+                        </tr>
+                        <tr>
+                            <td class="col-4 text-center border-1 border border-dark fs-6">2</td>
+                        </tr>
+                        <tr>
+                            <td class="col-4 text-center border-1 border border-dark fs-6">1</td>
+                        </tr>
+                        </table>
+                </div>
+                <div class="row border-3 border-dark border-bottom mx-auto" style="height: 43px;">
+                    <div class="col-12 mt-3 ps-0">
+                        <button class="bg-warning fs-6 fw-bolder border-0 col-6">U.V SETTINGS</button>
+                      </div>
+                </div>
+                <div class="row mt-3 ms-lg-1">
+                    <table class="table-bordered col-4">
+                        <tr>
+                            <th class="bg-dark text-white text-center fs-6">U.V TYPE</th>
+                        </tr>
+                        <tr>
+                            <td class="text-lg-start border-1 border border-dark fs-6">FULL</td>
+                        </tr>
+                        <tr>
+                            <td class="text-lg-start border-1 border border-dark fs-6">SPOT</td>
+                        </tr>
+                        <tr>
+                            <td class="text-lg-start border-1 border border-dark fs-6">TEXTURE</td>
+                        </tr>
+                        <tr>
+                            <td class="text-lg-start border-1 border border-dark fs-6">RAISED</td>
+                        </tr>
+                        </table>
+                </div>
+            </div>
+
+            <div class="col-2 border-3 border-end border-dark px-0">
+                <div class="row border-3 border-dark border-bottom mx-auto">
+                    <div class="col-12 mt-3 px-0">
+                        <button class="bg-warning fs-6 fw-bolder border-0 col-12">U.V SETTINGS</button>
+                      </div>
+                </div>
+                <div class="row mt-3 ms-lg-1 me-1">
+                    <table class="table-bordered">
+                        <tr>
+                            <th class="bg-dark text-white text-center fs-6">PRESS | MACHINES</th>
+                        </tr>
+                        <tr>
+                            <td class="border-1 text-center border border-dark fs-6 bg-light">HEIDELBERG GTO-46</td>
+                        </tr>
+                        <tr>
+                            <td class="border-1 border text-center border-dark fs-6">HEIDELBERG GTO-52</td>
+                        </tr>
+                        <tr>
+                            <td class="border-1 border border-dark text-center fs-6 bg-light">ROTA (SPOT COLOR)</td>
+                        </tr>
+                        </table>
+
+                    <table class="table-bordered mt-5">
+                        <tr>
+                            <th class="bg-dark text-white text-center fs-6">COMPULSORY PROCESS</th>
+                        </tr>
+                        <tr>
+                            <td class="border-1 text-lg-start border border-dark fs-6 bg-light">PAPER MART</td>
+                        </tr>
+                        <tr>
+                            <td class="border-1 border text-lg-start border-dark fs-6">SLICING</td>
+                        </tr>
+                        <tr>
+                            <td class="border-1 border border-dark text-lg-start fs-6 bg-light">CTP</td>
+                        </tr>
+                        <tr>
+                            <td class="border-1 border border-dark text-lg-start fs-6">PRESS</td>
+                        </tr>
+                        </table>
+
+                    <table class="table-bordered mt-5">
+                        <tr>
+                            <th class="bg-dark text-white text-center fs-6">POST PRESS PROCESS</th>
+                        </tr>
+                        <tr>
+                            <td class="border-1 text-lg-start border border-dark fs-6 bg-light">SELECT PROCESS</td>
+                        </tr>
+                        <tr>
+                            <td class="border-1 border text-lg-start border-dark fs-6">CUTTIING</td>
+                        </tr>
+                        <tr>
+                            <td class="border-1 border border-dark text-lg-start fs-6 bg-light">CREASING</td>
+                        </tr>
+                        <tr>
+                            <td class="border-1 border border-dark text-lg-start fs-6">LAMINATION</td>
+                        </tr>
+                        <tr>
+                            <td class="border-1 border border-dark text-lg-start fs-6 bg-light">DIE MAKING</td>
+                        </tr>
+                        <tr>
+                            <td class="border-1 border border-dark text-lg-start fs-6">DIE CUTTING</td>
+                        </tr>
+                        <tr>
+                            <td class="border-1 border border-dark text-lg-start fs-6 bg-light">PASTING</td>
+                        </tr>
+                        <tr>
+                            <td class="border-1 border border-dark text-lg-start fs-6">U.V</td>
+                        </tr>
+                        <tr>
+                            <td class="border-1 border border-dark text-lg-start fs-6 bg-light">FOIL PASTING</td>
+                        </tr>
+                        <tr>
+                            <td class="border-1 border border-dark text-lg-start fs-6">MANUAL NUMBERING</td>
+                        </tr>
+                        <tr>
+                            <td class="border-1 border border-dark text-lg-start fs-6 bg-light">MACHINE NUMBERING 46</td>
+                        </tr>
+                        <tr>
+                            <td class="border-1 border border-dark text-lg-start fs-6">MANUAL PERFORATION</td>
+                        </tr>
+                        <tr>
+                            <td class="border-1 border border-dark text-lg-start fs-6 bg-light">MACHINE PERFORATION 46</td>
+                        </tr>
+                        <tr>
+                            <td class="border-1 border border-dark text-lg-start fs-6">BINDING-LABOUR</td>
+                        </tr>
+                        <tr>
+                            <td class="border-1 border border-dark text-lg-start fs-6 bg-light">BINDING-MATERIAL</td>
+                        </tr>
+                        </table>
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="assets/settingsScript.js"></script>
+</body>
+</html>

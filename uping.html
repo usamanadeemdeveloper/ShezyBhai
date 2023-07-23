@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="bootstrap/bootstrap-5.2.0-dist/css/bootstrap.css"
+    />
+    <script src="bootstrap/bootstrap-5.2.0-dist/js/bootstrap.bundle.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid px-0">
+      <header class="bg-dark">
+        <img src="images/Screenshot 2023-07-05 232050.png" alt="" /> |
+        <span class="text-white">Calculator v1.0</span>
+      </header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid px-0">
+          <span class="col-15 bg-dark text-white p-2"
+            >Go To<i class="fa-solid fa-arrow-right offset-7"></i
+          ></span>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data- bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <button
+                  class="border-0 rounded-end bg-warning ms-lg-2 mt-1 mt-lg-0"
+                >
+                  <a class="nav-link active" aria-current="page" href="index.html"
+                    >Pricing Report</a
+                  >
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="border-0 rounded-end bg-warning ms-lg-2 mt-1 mt-lg-0"
+                >
+                  <a class="nav-link active" aria-current="page" href="paper-market-rates.html"
+                    >Paper Market Rates</a
+                  >
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="border-0 rounded-end bg-warning ms-lg-2 mt-1 mt-lg-0"
+                >
+                  <a class="nav-link active" aria-current="page" href="press-machines.html"
+                    >Press (Machines)</a
+                  >
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="border-0 rounded-end bg-warning ms-lg-2 mt-1 mt-lg-0"
+                >
+                  <a class="nav-link active" aria-current="page" href=""
+                    >Uping</a
+                  >
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="border-0 rounded-end bg-warning ms-lg-2 mt-1 mt-lg-0"
+                >
+                  <a class="nav-link active" aria-current="page" href="lamination-vendors.html"
+                    >Lamination-Vendors</a
+                  >
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="border-0 rounded-end bg-warning ms-lg-2 mt-1 mt-lg-0"
+                >
+                  <a class="nav-link active" aria-current="page" href="lamination-vendor-rates.html"
+                    >Lamination-Vendor-Rates</a
+                  >
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="border-0 rounded-end bg-warning ms-lg-2 mt-1 mt-lg-0"
+                >
+                  <a class="nav-link active" aria-current="page" href="more-options.html"
+                    >More Options</a
+                  >
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="border-0 rounded-end bg-warning ms-lg-2 mt-1 mt-lg-0"
+                >
+                  <a class="nav-link active" aria-current="page" href="settings.html"
+                    >Settings</a
+                  >
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <header class="d-flex">
+      <figure class="my-0">
+        <img src="images/Screenshot 2023-07-07 212232.png" alt="" />
+      </figure>
+      <!-- Button trigger modal -->
+      <button
+        type="button"
+        class="btn rounded-0 border mb-1 bg-info"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+        id="modal"
+        style="height: 49px"
+      >
+        +
+      </button>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Enter Data</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+                id="closed1"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="input-group mb-3">
+                <input
+                  type="text"
+                  id="productInput"
+                  class="form-control"
+                  placeholder="PRODUCT SIZE"
+                  aria-label="Recipient's username"
+                  aria-describedby="basic-addon2"
+                />
+                <input
+                  type="text"
+                  id="size1Input"
+                  class="form-control"
+                  placeholder='17" x 24"'
+                  aria-label="Recipient's username"
+                  aria-describedby="basic-addon2"
+                />
+              </div>
+              <div class="input-group mb-3">
+                <input
+                  type="text"
+                  id="size2Input"
+                  class="form-control"
+                  placeholder='23" x 36"'
+                  aria-label="Recipient's username"
+                  aria-describedby="basic-addon2"
+                />
+                <input
+                  type="text"
+                  id="size3Input"
+                  class="form-control"
+                  placeholder='25" x 36"'
+                  aria-label="Recipient's username"
+                  aria-describedby="basic-addon2"
+                />
+              </div>
+              <div class="input-group mb-3">
+                <input
+                  type="text"
+                  id="size4Input"
+                  class="form-control"
+                  placeholder='18" x 23"'
+                  aria-label="Recipient's username"
+                  aria-describedby="basic-addon2"
+                />
+                <input
+                  type="text"
+                  id="size5Input"
+                  class="form-control"
+                  placeholder='8.5" x 12"'
+                  aria-label="Recipient's username"
+                  aria-describedby="basic-addon2"
+                />
+              </div>
+              <div class="input-group mb-3">
+                <input
+                  type="text"
+                  id="size6Input"
+                  class="form-control"
+                  placeholder='20" x 30"'
+                  aria-label="Recipient's username"
+                  aria-describedby="basic-addon2"
+                />
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+                id="closed2"
+              >
+                Close
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                onclick="saveProduct()"
+                id="editMode"
+              >
+                Save changes
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figure class="my-0 offset-4">
+        <img src="images/Screenshot 2023-07-07 212201.png" alt="" />
+      </figure>
+    </header>
+    <div class="container-fluid px-0">
+      <div class="row mx-auto">
+        <div class="col-15 pe-0">
+          <button class="btn btn-sm bg-warning px-5 fw-bolder ms-auto">
+            SETTINGS
+          </button>
+          <table class="table table-bordered w-100 mt-3">
+            <tbody id="sizeSettings"></tbody>
+          </table>
+        </div>
+        <div class="col-10">
+          <table class="table table-bordered">
+            <thead></thead>
+            <tbody id="availableUping"></tbody>
+          </table>
+        </div>
+        <ul class="pagination justify-content-center" id="upingPagination">
+          <li class="page-item">
+            <a class="page-link" href="#" id="upingPreviousLink">Previous</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#" id="upingNextL  ink">Next</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src="assets/upingScript.js"></script>
+  </body>
+</html>

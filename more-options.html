@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="bootstrap/bootstrap-5.2.0-dist/css/bootstrap.css"
+    />
+    <script src="bootstrap/bootstrap-5.2.0-dist/js/bootstrap.bundle.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid px-0">
+      <header class="bg-dark">
+        <img src="images/Screenshot 2023-07-05 232050.png" alt="" /> |
+        <span class="text-white">Calculator v1.0</span>
+      </header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid px-0">
+          <span class="col-175 bg-dark text-white p-2"
+            >Go To<i class="fa-solid fa-arrow-right offset-8"></i
+          ></span>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <button
+                  class="border-0 rounded-end bg-warning ms-lg-2 mt-1 mt-lg-0"
+                >
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="index.html"
+                    >Pricing Report</a
+                  >
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="border-0 rounded-end bg-warning ms-lg-2 mt-1 mt-lg-0"
+                >
+                  <a class="nav-link active" aria-current="page" href="paper-market-rates.html"
+                    >Paper Market Rates</a
+                  >
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="border-0 rounded-end bg-warning ms-lg-2 mt-1 mt-lg-0"
+                >
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="press-machines.html"
+                    >Press (Machines)</a
+                  >
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="border-0 rounded-end bg-warning ms-lg-2 mt-1 mt-lg-0"
+                >
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="uping.html"
+                    >Uping</a
+                  >
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="border-0 rounded-end bg-warning ms-lg-2 mt-1 mt-lg-0"
+                >
+                  <a class="nav-link active" aria-current="page" href="lamination-vendors.html"
+                    >Lamination-Vendors</a
+                  >
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="border-0 rounded-end bg-warning ms-lg-2 mt-1 mt-lg-0"
+                >
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="lamination-vendor-rates.html"
+                    >Lamination-Vendor-Rates</a
+                  >
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="border-0 rounded-end bg-warning ms-lg-2 mt-1 mt-lg-0"
+                >
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href=""
+                    >More Options</a
+                  >
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="border-0 rounded-end bg-warning ms-lg-2 mt-1 mt-lg-0"
+                >
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="settings.html"
+                    >Settings</a
+                  >
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <header>
+      <button
+        class="btn text-center rounded-0 text-white bg-dark px-5 fw-bolder"
+      >
+        MORE OPTIONS
+      </button>
+    </header>
+    <div class="container-fluid px-0 mt-5 border-bottom border-3 border-dark">
+      <div class="row">
+        <div class="col-2">
+          <button class="btn bg-warning rounded-0 px-5">LAMINATION</button>
+        </div>
+        <div class="col-2 offset-1 pe-0">
+          <button class="btn bg-warning rounded-0 px-5 rounded-end">
+            VENDORS
+          </button>
+        </div>
+        <div class="col-3 ps-0">
+          <button class="btn bg-warning rounded-0 px-5 rounded-end">
+            VENDOR RATES
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid mt-2 px-0">
+      <div class="row">
+        <div class="col-4 btn-group">
+          <button class="bg-dark text-white col-6">SELECT VENDOR</button>
+          <select class="form-select form-select-sm text-center" id="vendors"></select>
+        </div>
+        <div class="col-3">
+            <input class="text-center bg-white border-1 border border-dark col-12" id="rate">
+        </div>
+      </div>
+      <div class="row mt-1">
+        <div class="col-4 btn-group">
+          <button class="bg-dark text-white col-6">SELECT PROCESS</button>
+          <select class="form-select form-select-sm text-center" id="process"></select>
+        </div>
+        <div class="col-3 btn-group">
+            <button class="bg-dark text-white col-6 fs-6">SELECT MATERIAL TYPE</button>
+            <select class="form-select form-select-sm text-center" id="material"></select>
+          </div>
+      </div>
+      <div class="row mt-1">
+        <div class="col-4 btn-group">
+          <button class="bg-dark text-white col-6">ENTER WIDTH (INCHES)</button>
+          <input class="text-center col-6" readonly id="width" value="18.00"/>
+        </div>
+        <div class="col-3 btn-group">
+            <button class="bg-dark text-white col-6 fs-6">ENTER HEIGHT (INCHES)</button>
+            <input class="text-center col-6" readonly id="height" value="12.00"/>
+          </div>
+      </div>
+      <div class="row mt-1">
+        <div class="col-4 btn-group">
+          <button class="bg-dark text-white col-6">LAMINATION SIDE OPTIONS</button>
+          <select class="form-select form-select-sm text-center" id="laminationOptions"></select>
+        </div>
+        <div class="col-3 btn-group">
+            <button class="fw-bolder col-6 fs-6">PRINT AREA (SQ/FT)</button>
+            <input class="text-center col-6" readonly id="printArea" value="1.50"/>
+          </div>
+      </div>
+    </div>
+    <script src="assets/moreOptionsScript.js"></script>
+  </body>
+</html>

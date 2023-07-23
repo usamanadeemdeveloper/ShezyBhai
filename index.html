@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="bootstrap/bootstrap-5.2.0-dist/css/bootstrap.css"
+    />
+    <script src="bootstrap/bootstrap-5.2.0-dist/js/bootstrap.bundle.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid px-0">
+      <header class="bg-dark">
+        <img src="images/Screenshot 2023-07-05 232050.png" alt="" /> |
+        <span class="text-white">Calculator v1.0</span>
+      </header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid px-0">
+          <span class="col-2 bg-dark text-white p-2"
+            >Go To<i class="fa-solid fa-arrow-right offset-9"></i
+          ></span>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <button
+                  class="border-0 rounded-end bg-warning ms-lg-2 mt-1 mt-lg-0"
+                >
+                  <a class="nav-link active" aria-current="page" href=""
+                    >Pricing Report</a
+                  >
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="border-0 rounded-end bg-warning ms-lg-2 mt-1 mt-lg-0"
+                >
+                  <a class="nav-link active" aria-current="page" href="paper-market-rates.html"
+                    >Paper Market Rates</a
+                  >
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="border-0 rounded-end bg-warning ms-lg-2 mt-1 mt-lg-0"
+                >
+                  <a class="nav-link active" aria-current="page" href="press-machines.html"
+                    >Press (Machines)</a
+                  >
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="border-0 rounded-end bg-warning ms-lg-2 mt-1 mt-lg-0"
+                >
+                  <a class="nav-link active" aria-current="page" href="uping.html"
+                    >Uping</a
+                  >
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="border-0 rounded-end bg-warning ms-lg-2 mt-1 mt-lg-0"
+                >
+                  <a class="nav-link active" aria-current="page" href="lamination-vendors.html"
+                    >Lamination-Vendors</a
+                  >
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="border-0 rounded-end bg-warning ms-lg-2 mt-1 mt-lg-0"
+                >
+                  <a class="nav-link active" aria-current="page" href="lamination-vendor-rates.html"
+                    >Lamination-Vendor-Rates</a
+                  >
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="border-0 rounded-end bg-warning ms-lg-2 mt-1 mt-lg-0"
+                >
+                  <a class="nav-link active" aria-current="page" href="more-options.html"
+                    >More Options</a
+                  >
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="border-0 rounded-end bg-warning ms-lg-2 mt-1 mt-lg-0"
+                >
+                  <a class="nav-link active" aria-current="page" href="settings.html"
+                    >Settings</a
+                  >
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="container-fluid text-center mx-auto px-0">
+      <div class="bg-dark row mx-auto">
+        <div class="col-lg-4 col-12 text-warning text-center text-lg-start">
+            <button class="border-0 bg-dark text-warning" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" onclick="getConfig(),getLamination(),getSpecs()">
+              Configurations <i class="fa-solid fa-arrow-down-wide-short"></i>
+            </button>
+        </div>
+        <div class="col-lg-5 col-12 text-white text-center" id="datetime"></div>
+      </div>
+      <div class="collapse container-fluid mt-3 mb-3" id="collapseExample">
+        <div class="row">
+          
+          <table class="table-bordered border-2 border border-dark table-responsive" style="width: 17rem;" id="configRate">
+            
+          </table>
+        
+        
+          <table class="table-bordered border-2 border border-dark table-responsive offset-1" style="width: 17rem;" id="laminationTable">
+            
+          </table>
+
+          <table class="table-bordered border-2 border border-dark table-responsive offset-1" style="width: 17rem;" id="specsTable">
+            
+          </table>
+        
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid px-0 mt-2">
+      <div class="row mx-auto">
+        <div class="col-lg-3 bg-dark text-white text-center">
+          Paper Stock : CarbonLess | GSM : 48
+        </div>
+        <div class="col-lg-1 col-6 bg-dark text-white fs-6 ms-lg-5 px-3">
+          Last Updated
+        </div>
+        <small class="col-lg-1 col-6 bg-light border">May 27 ,2022</small>
+        <small class="col-lg-1 col-6 bg-dark text-white fs-6 ps-1 px-0"
+          >Paper Market Rate</small
+        >
+        <small class="col-lg-1 col-6 bg-light border">PKR 2800.00</small>
+        <small class="col-lg-1 col-6 bg-dark text-white fs-6 px-0 text-center"
+          >Paper Market Qty</small
+        >
+        <small class="col-lg-1 col-6 bg-light border">500</small>
+        <small class="col-lg-1 col-6 bg-dark text-white fs-6 px-2"
+          >Cost Per Sheet</small
+        >
+        <small class="col-lg-1 col-6 bg-light border">PKR 5.60</small>
+      </div>
+    </div>
+    <div class="container-fluid table-responsive px-0">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Select Product</th>
+            <th scope="col" class="bg-light-warning">Job Color (S)</th>
+            <th scope="col" class="bg-light-warning">Size</th>
+            <th scope="col" class="bg-light-warning">Paper Stock</th>
+            <th scope="col" class="bg-light-warning">GSM</th>
+            <th scope="col" class="bg-light-warning">Sheet Size</th>
+            <th scope="col" class="bg-light-warning"># Of Up' (S)</th>
+            <th scope="col" class="bg-light-warning">Side Option</th>
+            <th scope="col" class="bg-light-warning">Imposition [Possible]</th>
+            <th scope="col" class="bg-light-warning">Job Colors [Black]</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+                <select class="form-select form-select-sm" id="selectProduct">   
+                </select>
+            </td>
+            <td>
+                <select class="form-select form-select-sm" id="colors">   
+                </select>
+            </td>
+            <td>
+                <select class="form-select form-select-sm" id="size">   
+                </select>
+            </td>
+            <td>
+                <select class="form-select form-select-sm" id="paperStock">   
+                </select>
+            </td>
+            <td>
+                <select class="form-select form-select-sm" id="grams">   
+                </select>
+            </td>
+            <td>
+                <select class="form-select form-select-sm" id="sheetSize">   
+                </select>
+            </td>
+            <td>
+                <select class="form-select form-select-sm" id="ofUp">   
+                </select>
+            </td>
+            <td>
+                <select class="form-select form-select-sm" id="sideOption">   
+                </select>
+            </td>
+            <td>
+              <select
+                class="form-select form-select-sm"
+                id="imposition"
+              ></select>
+            </td>
+            <td>
+              <select
+                class="form-select form-select-sm"
+                id="jobColors"
+              ></select>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="container-fluid px-0 table-responsive">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Costing</th>
+              <th colspan="5">Calculated Quantities</th>
+              <th colspan="4">Custom Quantities</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>PRODUCT QUANTITY</td>
+              <td>MOQ</td>
+              <td>QTY-2</td>
+              <td>QTY-3</td>
+              <td>QTY-4</td>
+              <td>QTY-5</td>
+              <td>CUSTOM QTY-1</td>
+              <td>CUSTOM QTY-2</td>
+              <td>CUSTOM QTY-3</td>
+              <td>CUSTOM QTY-4</td>
+            </tr>
+            <tr>
+              <td>QUANTITY IN LEAFS</td>
+              <td id="qty1"></td>
+              <td id="qty2"></td>
+              <td id="qty3"></td>
+              <td id="qty4"></td>
+              <td id="qty5"></td>
+              <td id="customQty1"></td>
+              <td id="customQty2"></td>
+              <td id="customQty3"></td>
+              <td id="customQty4"></td>
+            </tr>
+            <tr>
+              <td>QUANTITY IN BOOKS</td>
+              <td id="moqQtyInBooks"></td>
+              <td id="moqQty2InBooks"></td>
+              <td id="moqQty3InBooks"></td>
+              <td id="moqQty4InBooks"></td>
+              <td id="moqQty5InBooks"></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>SHEETS</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>PAPER MART</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>CLICING</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>CTP</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>PRESS</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>FIXED COST</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>CUTTING</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>SELECT PROCESS..</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>SELECT PROCESS..</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>VARIABLE COST</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>TOTAL COST</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>PRICE PER QTY</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>PRICE PER UNIT</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>TOTAL PROFIT</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    <script src="assets/calculationScript.js"></script>
+  </body>
+</html>

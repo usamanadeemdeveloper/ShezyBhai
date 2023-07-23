@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="bootstrap/bootstrap-5.2.0-dist/css/bootstrap.css"
+    />
+    <script src="bootstrap/bootstrap-5.2.0-dist/js/bootstrap.bundle.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid px-0">
+      <header class="bg-dark">
+        <img src="images/Screenshot 2023-07-05 232050.png" alt="" /> |
+        <span class="text-white">Calculator v1.0</span>
+      </header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid px-0">
+          <span class="col-175 bg-dark text-white p-2"
+            >Go To<i class="fa-solid fa-arrow-right offset-8"></i
+          ></span>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <button
+                  class="border-0 rounded-end bg-warning ms-lg-2 mt-1 mt-lg-0"
+                >
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="index.html"
+                    >Pricing Report</a
+                  >
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="border-0 rounded-end bg-warning ms-lg-2 mt-1 mt-lg-0"
+                >
+                  <a class="nav-link active" aria-current="page" href="paper-market-rates.html"
+                    >Paper Market Rates</a
+                  >
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="border-0 rounded-end bg-warning ms-lg-2 mt-1 mt-lg-0"
+                >
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="press-machines.html"
+                    >Press (Machines)</a
+                  >
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="border-0 rounded-end bg-warning ms-lg-2 mt-1 mt-lg-0"
+                >
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="uping.html"
+                    >Uping</a
+                  >
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="border-0 rounded-end bg-warning ms-lg-2 mt-1 mt-lg-0"
+                >
+                  <a class="nav-link active" aria-current="page" href="lamination-vendors.html"
+                    >Lamination-Vendors</a
+                  >
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="border-0 rounded-end bg-warning ms-lg-2 mt-1 mt-lg-0"
+                >
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href=""
+                    >Lamination-Vendor-Rates</a
+                  >
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="border-0 rounded-end bg-warning ms-lg-2 mt-1 mt-lg-0"
+                >
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="more-options.html"
+                    >More Options</a
+                  >
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="border-0 rounded-end bg-warning ms-lg-2 mt-1 mt-lg-0"
+                >
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="settings.html"
+                    >Settings</a
+                  >
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <header class="d-flex">
+      <figure class="my-0">
+        <img src="images/Screenshot 2023-07-08 153256.png" alt="" />
+      </figure>
+      <!-- Button trigger modal -->
+      <button
+        type="button"
+        class="btn bg-warning rounded-0 border"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        +
+      </button>
+
+      <!-- Modal -->
+      <div
+        class="modal fade modalVendor"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Enter Data</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+                id="closedVendor1"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="input-group mb-3">
+                <input
+                  type="text"
+                  id="dateInput"
+                  class="form-control"
+                  placeholder="DATE"
+                  aria-label="Recipient's username"
+                  aria-describedby="basic-addon2"
+                />
+                <input
+                  type="text"
+                  id="vendorInput"
+                  class="form-control"
+                  placeholder="Vendor"
+                  aria-label="Recipient's username"
+                  aria-describedby="basic-addon2"
+                />
+              </div>
+              <div class="input-group mb-3">
+                <input
+                  type="text"
+                  id="processInput"
+                  class="form-control"
+                  placeholder="PROCESS"
+                  aria-label="Recipient's username"
+                  aria-describedby="basic-addon2"
+                />
+                <input
+                  type="text"
+                  id="materialInput"
+                  class="form-control"
+                  placeholder="MATERIAL"  
+                  aria-label="Recipient's username"
+                  aria-describedby="basic-addon2"
+                />
+              </div>
+              <div class="input-group mb-3">
+                <input
+                  type="text"
+                  id="rateInput"
+                  class="form-control"
+                  placeholder="RATE"
+                  aria-label="Recipient's username"
+                  aria-describedby="basic-addon2"
+                />
+                <input
+                  type="text"
+                  id="notesInput"
+                  class="form-control"
+                  placeholder="NOTES"
+                  aria-label="Recipient's username"
+                  aria-describedby="basic-addon2"
+                />
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+                id="closedVendor2"
+              >
+                Close
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                onclick="saveVendor()"
+                id="editVendor"
+              >
+                Save changes
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row bg-dark text-white offset-7 me-0 pt-1 mx-auto px-3 pe-5">
+        <h5 class="pt-2">Total Records: <span id="vendorCount"></span></h5>
+      </div>
+    </header>
+    <div class="container-fluid px-0">
+      <table class="table table-bordered">
+        <thead></thead>
+        <tbody id="availableVendors"></tbody>
+      </table>
+      <ul class="pagination justify-content-center" id="paginationVendor">
+        <li class="page-item">
+          <a class="page-link" href="#" id="previousLink">Previous</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#" id="nextLink">Next</a>
+        </li>
+      </ul>
+    </div>
+    <script src="assets/vendorTableScript.js"></script>
+  </body>
+</html>
